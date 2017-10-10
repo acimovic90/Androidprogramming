@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">deviceDetector</string>
+    <string name="email_input">Email</string>
     <string name="username_input">Username</string>
     <string name="password_input">Password</string>
     <string name="login_button">LOGIN</string>
+    <string name="signup_button">SIGNUP</string>
+    <string name="create_button">CREATE USER</string>
 </resources>

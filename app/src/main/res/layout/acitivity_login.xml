@@ -36,5 +36,17 @@
             android:layout_width="match_parent"
             android:text="@string/login_button"
             android:layout_height="60dp" />
+
+        <Button
+            android:id="@+id/button_signup"
+            android:onClick="signup"
+            android:textColor="#fff"
+            android:background="@drawable/buttonstyleselector"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:text="@string/signup_button"
+            android:layout_height="60dp" />
     </LinearLayout>
+
+
 </RelativeLayout>
