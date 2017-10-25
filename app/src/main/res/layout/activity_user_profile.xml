@@ -4,22 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.acimo.devicedetector.UserProfile">
+    tools:context="com.example.acimo.devicedetector.UserProfileActivity">
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="11dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:padding="10dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/user_info"
@@ -28,51 +17,85 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/emailTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4"
-        android:layout_column="0"
-        android:layout_marginTop="68dp"
-        android:layout_row="1"
+        android:layout_below="@+id/titleTextView"
+        android:layout_marginTop="12dp"
         android:paddingLeft="10dp"
-        android:text="@string/password_input"
+        android:text="@string/email_input"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="70dp" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <EditText
+        android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:layout_below="@+id/emailTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/usernameEditText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
-        android:layout_column="0"
-        android:layout_marginTop="12dp"
-        android:layout_row="1"
+        android:layout_below="@+id/emailEditText"
         android:paddingLeft="10dp"
         android:text="@string/username_input"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="70dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:layout_alignBottom="@+id/passwordTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView3"
-        android:layout_marginTop="12dp"
+        android:layout_marginBottom="23dp" />
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="@string/password_input"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="70dp"
+        android:layout_marginBottom="26dp"
+        android:layout_above="@+id/passwordEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPassword"
+        android:layout_marginBottom="54dp"
+        android:layout_above="@+id/changeUserButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/changeUserButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/change_button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="118dp" />
 </RelativeLayout>

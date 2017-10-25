@@ -1,9 +1,7 @@
 package com.example.acimo.devicedetector;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
-import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,24 +9,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.acimo.devicedetector.utils.HttpHelper;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+import com.example.acimo.devicedetector.utils.RegisterRequest;
 
-import java.io.IOException;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-public class SignupAcivity extends AppCompatActivity {
+public class RegisterUserActivity extends AppCompatActivity {
 
     private EditText createEmailText;
     private EditText createUserText;
     private EditText createPasswordText;
     private TextView outputText;
+    private static final String TAG = "RegisterUserActivity";
     private Button createUserButton;
     public static final String EMAIL_KEY = "email_input";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup_acivity);
+        setContentView(R.layout.activity_register_user);
 
         createEmailText = (EditText) findViewById(R.id.text_create_email);
         createUserText = (EditText) findViewById(R.id.text_create_username);
@@ -41,14 +43,42 @@ public class SignupAcivity extends AppCompatActivity {
                 String checkEmail = createEmailText.getText().toString();
                 String checkUsername = createUserText.getText().toString();
                 String checkPassword = createPasswordText.getText().toString();
-                AsyncTaskRunner runner = new AsyncTaskRunner();
-                runner.execute(checkEmail, checkUsername, checkPassword); //Smider et array og skal matche den datatype AsyncTask har
+
+                Response.Listener<String> responseListener = new Response.Listener<String>(){
+
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            Log.i(TAG, response); //Check the response
+                            boolean success = jsonResponse.getBoolean("success");
+
+                            if(success){
+                                Intent intent = new Intent(RegisterUserActivity.this, MainActivity.class);
+                                RegisterUserActivity.this.startActivity(intent);
+                            }else{
+                                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterUserActivity.this);
+                                builder.setMessage("Register Failed").setNegativeButton("Retry", null).create().show();
+
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                RegisterRequest registerRequest = new RegisterRequest(checkEmail, checkUsername, checkPassword, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(RegisterUserActivity.this);
+                queue.add(registerRequest);
+                /*AsyncTaskRunner runner = new AsyncTaskRunner();
+                runner.execute(checkEmail, checkUsername, checkPassword); //Smider et array og skal matche den datatype AsyncTask har*/
 
             }
         });
 
 
     }
+    /*
     class AsyncTaskRunner extends AsyncTask<String, String, String> {
 
         @Override
@@ -88,6 +118,6 @@ public class SignupAcivity extends AppCompatActivity {
     public void postData(String postData) { //kald webservice her
 
     }
-
+    */
 
 }

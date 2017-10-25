@@ -15,6 +15,7 @@
         android:layout_alignParentStart="true">
 
         <EditText
+            android:id="@+id/usernameTextView"
             android:textColorHint="#fff"
             android:background="@drawable/edittextstyle"
             android:layout_width="300dp"
@@ -22,6 +23,7 @@
             android:layout_gravity="center"
             android:hint="@string/username_input" />
         <EditText
+            android:id="@+id/passwordTextView"
             android:textColorHint="#fff"
             android:background="@drawable/edittextstyle"
             android:layout_width="300dp"
@@ -29,17 +31,20 @@
             android:layout_gravity="center"
             android:hint="@string/password_input" />
             />
+
         <Button
-            android:textColor="#fff"
-            android:background="@drawable/buttonstyleselector"
-            android:layout_marginTop="50dp"
+            android:id="@+id/button_login"
+            android:onClick="LoginUser"
             android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/buttonstyleselector"
             android:text="@string/login_button"
-            android:layout_height="60dp" />
+            android:textColor="#fff" />
 
         <Button
             android:id="@+id/button_signup"
-            android:onClick="signup"
+            android:onClick="SignupUser"
             android:textColor="#fff"
             android:background="@drawable/buttonstyleselector"
             android:layout_marginTop="10dp"

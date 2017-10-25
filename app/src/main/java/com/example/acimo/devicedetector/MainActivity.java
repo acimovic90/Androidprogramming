@@ -1,14 +1,10 @@
 package com.example.acimo.devicedetector;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,8 +16,13 @@ public class MainActivity extends AppCompatActivity {
         signupButton = (Button) findViewById(R.id.button_signup);
     }
 
-    public void signup(View view){
-        Intent intent = new Intent(this, SignupAcivity.class);
+    public void LoginUser(View view){
+        Intent intent = new Intent(this, UserProfileActivity.class);
+        startActivity(intent);
+    }
+
+    public void SignupUser(View view){
+        Intent intent = new Intent(this, RegisterUserActivity.class);
         startActivity(intent);
     }
 

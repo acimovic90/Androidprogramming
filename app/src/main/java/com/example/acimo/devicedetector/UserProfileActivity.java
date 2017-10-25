@@ -3,7 +3,7 @@ package com.example.acimo.devicedetector;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class UserProfile extends AppCompatActivity {
+public class UserProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

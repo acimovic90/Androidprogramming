@@ -18,13 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupAcivity">
+        <activity android:name=".RegisterUserActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".CreateUserActivity" />
-        <activity android:name=".UserProfile"></activity>
+        <activity android:name=".UserProfileActivity" />
     </application>
 
 </manifest>
