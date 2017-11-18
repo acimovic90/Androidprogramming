@@ -30,7 +30,7 @@
         tools:layout_editor_absoluteY="70dp" />
 
     <EditText
-        android:id="@+id/emailEditText"
+        android:id="@+id/text_update_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
@@ -45,17 +45,17 @@
         android:id="@+id/usernameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/usernameEditText"
+        android:layout_above="@+id/text_update_username"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/emailEditText"
+        android:layout_below="@+id/text_update_email"
         android:paddingLeft="10dp"
         android:text="@string/username_input"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="70dp" />
 
     <EditText
-        android:id="@+id/usernameEditText"
+        android:id="@+id/text_update_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -75,23 +75,23 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="70dp"
         android:layout_marginBottom="26dp"
-        android:layout_above="@+id/passwordEditText"
+        android:layout_above="@+id/text_update_username"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/text_update_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
         android:layout_marginBottom="54dp"
-        android:layout_above="@+id/changeUserButton"
+        android:layout_above="@+id/button_update"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/changeUserButton"
+        android:id="@+id/button_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/change_button"

@@ -15,7 +15,7 @@
         android:layout_alignParentStart="true">
 
         <EditText
-            android:id="@+id/usernameTextView"
+            android:id="@+id/text_login_username"
             android:textColorHint="#fff"
             android:background="@drawable/edittextstyle"
             android:layout_width="300dp"
@@ -23,7 +23,7 @@
             android:layout_gravity="center"
             android:hint="@string/username_input" />
         <EditText
-            android:id="@+id/passwordTextView"
+            android:id="@+id/text_login_password"
             android:textColorHint="#fff"
             android:background="@drawable/edittextstyle"
             android:layout_width="300dp"
@@ -34,7 +34,6 @@
 
         <Button
             android:id="@+id/button_login"
-            android:onClick="LoginUser"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="50dp"
