@@ -23,7 +23,6 @@ public class RegisterUserActivity extends AppCompatActivity {
     private EditText createEmailText;
     private EditText createUserText;
     private EditText createPasswordText;
-    private TextView outputText;
     private static final String TAG = "RegisterUserActivity";
     private Button createUserButton;
     public static final String EMAIL_KEY = "email_input";
@@ -36,7 +35,6 @@ public class RegisterUserActivity extends AppCompatActivity {
         createUserText = (EditText) findViewById(R.id.text_create_username);
         createPasswordText = (EditText) findViewById(R.id.text_create_password);
         createUserButton = (Button) findViewById(R.id.button_create);
-        outputText = (TextView) findViewById(R.id.output);
         createUserButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

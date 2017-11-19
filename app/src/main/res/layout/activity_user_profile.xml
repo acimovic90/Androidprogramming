@@ -1,101 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context="com.example.acimo.devicedetector.UserProfileActivity">
 
-
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/user_info"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/emailTextView"
+    <LinearLayout
+        android:paddingTop="100dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/titleTextView"
-        android:layout_marginTop="12dp"
-        android:paddingLeft="10dp"
-        android:text="@string/email_input"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="70dp" />
+        android:layout_alignParentStart="true">
 
-    <EditText
-        android:id="@+id/text_update_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:layout_below="@+id/emailTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/text_update_title"
+            android:textColor="#fff"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_gravity="center"
+            android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/usernameTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/text_update_username"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/text_update_email"
-        android:paddingLeft="10dp"
-        android:text="@string/username_input"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="70dp" />
+        <EditText
+            android:id="@+id/text_update_email"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edittextstyle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:hint="@string/email_input" />
+        <EditText
+            android:id="@+id/text_update_username"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edittextstyle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:hint="@string/username_input" />
+        <EditText
+            android:id="@+id/text_update_password"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edittextstyle"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:hint="@string/password_input" />
 
-    <EditText
-        android:id="@+id/text_update_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:layout_alignBottom="@+id/passwordTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="23dp" />
-
-    <TextView
-        android:id="@+id/passwordTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:text="@string/password_input"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="70dp"
-        android:layout_marginBottom="26dp"
-        android:layout_above="@+id/text_update_username"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:id="@+id/text_update_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:layout_marginBottom="54dp"
-        android:layout_above="@+id/button_update"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/button_update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/change_button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="118dp" />
+        <Button
+            android:id="@+id/button_update"
+            android:textColor="#fff"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:background="@drawable/buttonstyleselector"
+            android:text="@string/update_text" />
+        />
+    </LinearLayout>
 </RelativeLayout>
