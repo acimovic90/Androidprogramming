@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.example.acimo.devicedetector.utils.LoginRequest;
 import com.example.acimo.devicedetector.utils.UpdateRequest;
 
 import org.json.JSONException;
@@ -23,6 +22,7 @@ public class UserProfileActivity extends AppCompatActivity {
     private EditText updateEmailText;
     private EditText updateUsernameText;
     private EditText updatePasswordText;
+    private Button chooseGymButton;
     private Button updateButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class UserProfileActivity extends AppCompatActivity {
         updateEmailText = (EditText) findViewById(R.id.text_update_email);
         updateUsernameText = (EditText) findViewById(R.id.text_update_username);
         updatePasswordText = (EditText) findViewById(R.id.text_update_password);
+        chooseGymButton = (Button) findViewById(R.id.button_find_gym);
         updateButton = (Button) findViewById(R.id.button_update);
 
         Intent intent = getIntent();
@@ -44,6 +45,13 @@ public class UserProfileActivity extends AppCompatActivity {
         updateEmailText.setText(updateEmail);
         updateUsernameText.setText(updateUsername);
         updatePasswordText.setText(updatePassword);
+
+        chooseGymButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(UserProfileActivity.this, FindGymActivity.class);
+                UserProfileActivity.this.startActivity(intent);
+            }
+        });
 
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override

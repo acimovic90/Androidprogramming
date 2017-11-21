@@ -9,4 +9,5 @@
     <string name="update_text">UPDATE</string>
     <string name="change_button">CHANGE USER INFO</string>
     <string name="user_info">User Info</string>
+    <string name="gyms_button">Find Gym</string>
 </resources>
