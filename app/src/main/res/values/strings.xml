@@ -5,7 +5,9 @@
     <string name="password_input">Password</string>
     <string name="login_button">LOGIN</string>
     <string name="signup_button">SIGNUP</string>
-    <string name="create_button">CREATE USER</string>
+    <string name="register_text">REGISTER</string>
+    <string name="update_text">UPDATE</string>
     <string name="change_button">CHANGE USER INFO</string>
     <string name="user_info">User Info</string>
+    <string name="gyms_button">Find Gym</string>
 </resources>
