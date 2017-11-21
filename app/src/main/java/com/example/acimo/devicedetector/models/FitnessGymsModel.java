@@ -1,6 +1,8 @@
 package com.example.acimo.devicedetector.models;
 
 
+import java.util.List;
+
 public class FitnessGymsModel {
     private String url;
     private String id;
@@ -10,6 +12,17 @@ public class FitnessGymsModel {
     private String city;
     private String zip;
     private String country;
+
+    public FitnessGymsModel(String url, String id, int active, String adress1, String adress2, String city, String zip, String country) {
+        this.url = url;
+        this.id = id;
+        this.active = active;
+        this.adress1 = adress1;
+        this.adress2 = adress2;
+        this.city = city;
+        this.zip = zip;
+        this.country = country;
+    }
 
     public String getUrl() {
         return url;

@@ -19,10 +19,14 @@ public class FitnessGymsRequest { //Fejl opstår herfra
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    JSONArray jsonArray = response.getJSONArray("data");
-                    FitnessGymsModel fitnessGymsModel = new FitnessGymsModel();
+                    JSONArray jsonArray = response.getJSONArray("data").getJSONArray(0);
+                   // JSONObject j = (JSONObject) jsonArray.get(1);
+                   //j.getJSONArray("list");
+                   // FitnessGymsModel fitnessGymsModel = new FitnessGymsModel();
+                    //Create new arraylist
                     for(int i = 0; i < jsonArray.length(); i++){
-
+                        JSONObject j = (JSONObject) jsonArray.get(i);
+                       // mylist.add(new FitnessGymsModel())
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
