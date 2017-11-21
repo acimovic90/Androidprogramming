@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RegisterUserActivity.class);
+                Intent intent = new Intent(MainActivity.this, FindGymActivity.class); //Skift til RegisterUserActivity.class
                 startActivity(intent);
             }
         });
