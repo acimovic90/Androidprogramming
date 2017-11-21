@@ -34,6 +34,9 @@ public class FindGymActivity extends AppCompatActivity {
             public void onClick(View v) {
                 requestQueue = Volley.newRequestQueue(FindGymActivity.this);
                 fitnessGymsRequest = new FitnessGymsRequest(requestQueue);
+                FitnessGymsModel fitnessGymsModel = new FitnessGymsModel();
+                fitnessGymsModel.getAdress1();
+
             }
         });
     }
