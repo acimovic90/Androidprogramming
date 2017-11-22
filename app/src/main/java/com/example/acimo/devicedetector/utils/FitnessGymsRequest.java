@@ -34,13 +34,14 @@ public class FitnessGymsRequest { //Fejl opstår herfra
                     for(int i = 0; i < jsonArray.length(); i++){
                         fitnessGymsModel = new FitnessGymsModel();
                         JSONObject j = (JSONObject) jsonArray.get(i);
+                        Log.d("showId", ""+j.getInt("id"));
                         fitnessGymsModel.setId(j.getInt("id"));
                         fitnessGymsModel.setActive(j.getInt("active"));
                         fitnessGymsModel.setAdress1(j.getString("adress1"));
                         fitnessGymsModel.setAdress2(j.getString("adress2"));
                         fitnessGymsModel.setCity(j.getString("city"));
                         fitnessGymsModel.setZip(j.getString("zip"));
-                        fitnessGymsModel.setCountry(j.getString("dk"));
+                        fitnessGymsModel.setCountry(j.getString("country"));
                         listFitnessGymsModel.FitnessList.add(fitnessGymsModel);
                     }
                 } catch (JSONException e) {
