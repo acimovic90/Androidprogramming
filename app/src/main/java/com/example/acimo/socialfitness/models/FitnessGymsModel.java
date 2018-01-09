@@ -1,10 +1,7 @@
-package com.example.acimo.devicedetector.models;
+package com.example.acimo.socialfitness.models;
 
-
-import java.util.List;
 
 public class FitnessGymsModel {
-    private String url;
     private int id;
     private int active;
     private String adress1;
@@ -12,15 +9,6 @@ public class FitnessGymsModel {
     private String city;
     private String zip;
     private String country;
-
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
 
     public int getId() {
         return id;
@@ -77,8 +65,5 @@ public class FitnessGymsModel {
     public void setCountry(String country) {
         this.country = country;
     }
-
-
-
-
 }
+

@@ -1,4 +1,4 @@
-package com.example.acimo.devicedetector.utils;
+package com.example.acimo.socialfitness.Webservices;
 
 import android.util.Log;
 
@@ -11,10 +11,8 @@ import java.util.Map;
 public class RegisterRequest extends StringRequest {
     private static final String REGISTER_REQUEST_URL = "http://adgrego.dk/register.php";
     private Map<String, String> params;
-    private static final String TAG = "RegisterRequest";
-    public RegisterRequest(String email, String username, String password, Response.Listener<String> listener){ //constructer
-        super(Method.POST, REGISTER_REQUEST_URL, listener, null); //Super is the baseclass which is StringRequest
-        Log.d(TAG, "inside RegisterRequest we get " + listener);
+    public RegisterRequest(String email, String username, String password, Response.Listener<String> listener){
+        super(Method.POST, REGISTER_REQUEST_URL, listener, null);
         params = new HashMap<>();
         params.put("email",email);
         params.put("username",username);
@@ -26,3 +24,6 @@ public class RegisterRequest extends StringRequest {
     }
 
 }
+
+
+

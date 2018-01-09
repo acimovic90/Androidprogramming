@@ -1,4 +1,4 @@
-package com.example.acimo.devicedetector;
+package com.example.acimo.socialfitness;
 
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.example.acimo.devicedetector.utils.UpdateRequest;
+import com.example.acimo.socialfitness.Webservices.UpdateRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -86,3 +86,5 @@ public class UserProfileActivity extends AppCompatActivity {
         });
     }
 }
+
+

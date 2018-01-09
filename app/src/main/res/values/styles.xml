@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"> <!--Being used in AndroidManifext.xml-->
         <!-- Customize your theme here. -->
@@ -10,5 +9,6 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorForeground">@color/foreground_material_light</item>
     </style>
-
 </resources>
+
+

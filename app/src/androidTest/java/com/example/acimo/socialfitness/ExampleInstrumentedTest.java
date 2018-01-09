@@ -1,4 +1,4 @@
-package com.example.acimo.devicedetector;
+package com.example.acimo.socialfitness;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
