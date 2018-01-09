@@ -1,7 +1,7 @@
 package com.example.acimo.socialfitness.models;
+import java.io.Serializable;
 
-
-public class FitnessGymsModel {
+public class FitnessGymsModel implements Serializable {
     private int id;
     private int active;
     private String adress1;

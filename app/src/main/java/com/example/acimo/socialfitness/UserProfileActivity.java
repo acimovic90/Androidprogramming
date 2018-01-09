@@ -1,5 +1,6 @@
 package com.example.acimo.socialfitness;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.example.acimo.socialfitness.Webservices.FitnessGymsRequest;
 import com.example.acimo.socialfitness.Webservices.UpdateRequest;
 
 import org.json.JSONException;
@@ -24,6 +26,10 @@ public class UserProfileActivity extends AppCompatActivity {
     private EditText updatePasswordText;
     private Button chooseGymButton;
     private Button updateButton;
+    FindGymActivity findGymActivity;
+    RequestQueue requestQueue;
+    FitnessGymsRequest fitnessGymsRequest;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +51,12 @@ public class UserProfileActivity extends AppCompatActivity {
         updateEmailText.setText(updateEmail);
         updateUsernameText.setText(updateUsername);
         updatePasswordText.setText(updatePassword);
-
+        requestQueue = Volley.newRequestQueue(UserProfileActivity.this);
+        //requestQueue2 = Volley.newRequestQueue(findGymActivity);
         chooseGymButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(UserProfileActivity.this, FindGymActivity.class);
-                UserProfileActivity.this.startActivity(intent);
+
+                fitnessGymsRequest = new FitnessGymsRequest(requestQueue, UserProfileActivity.this);
             }
         });
 
