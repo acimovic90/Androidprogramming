@@ -1,6 +1,4 @@
-package com.example.acimo.socialfitness.Webservices;
-
-import android.util.Log;
+package com.example.acimo.androidProgramming.Webservices;
 
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
@@ -9,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterRequest extends StringRequest {
-    private static final String REGISTER_REQUEST_URL = "http://adgrego.dk/register.php";
+    private static final String REGISTER_REQUEST_URL = "INSERT URI HERE";
     private Map<String, String> params;
     public RegisterRequest(String email, String username, String password, Response.Listener<String> listener){
         super(Method.POST, REGISTER_REQUEST_URL, listener, null);

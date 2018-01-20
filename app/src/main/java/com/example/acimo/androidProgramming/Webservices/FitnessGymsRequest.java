@@ -1,4 +1,4 @@
-package com.example.acimo.socialfitness.Webservices;
+package com.example.acimo.androidProgramming.Webservices;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -10,9 +10,9 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.acimo.socialfitness.FindGymActivity;
-import com.example.acimo.socialfitness.UserProfileActivity;
-import com.example.acimo.socialfitness.models.FitnessGymsModel;
+import com.example.acimo.androidProgramming.FindGymActivity;
+import com.example.acimo.androidProgramming.UserProfileActivity;
+import com.example.acimo.androidProgramming.models.FitnessGymsModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 
 public class FitnessGymsRequest {
-    private static final String FITNESS_REQUEST_URL = "https://www.fitnessworld.com/dk/api/v1.0.0/centers";
+    private static final String FITNESS_REQUEST_URL = "INSERT URI HERE";
     private FitnessGymsModel fitnessGymsModel;
     public ArrayList<FitnessGymsModel> FitnessList;
     ProgressDialog pd;

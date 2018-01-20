@@ -1,9 +1,9 @@
-package com.example.acimo.socialfitness;
+package com.example.acimo.androidProgramming;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-import com.example.acimo.socialfitness.models.FitnessGymsModel;
+import com.example.acimo.androidProgramming.models.FitnessGymsModel;
 import java.util.ArrayList;
 
 

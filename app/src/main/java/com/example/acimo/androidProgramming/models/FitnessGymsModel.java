@@ -1,4 +1,4 @@
-package com.example.acimo.socialfitness.models;
+package com.example.acimo.androidProgramming.models;
 import java.io.Serializable;
 
 public class FitnessGymsModel implements Serializable {

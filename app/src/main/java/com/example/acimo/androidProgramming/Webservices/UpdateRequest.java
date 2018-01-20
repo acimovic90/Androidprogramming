@@ -1,4 +1,4 @@
-package com.example.acimo.socialfitness.Webservices;
+package com.example.acimo.androidProgramming.Webservices;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class UpdateRequest extends StringRequest{
-    private static final String UPDATE_REQUEST_URL = "http://adgrego.dk/update.php";
+    private static final String UPDATE_REQUEST_URL = "INSERT URI HERE";
     private Map<String, String> params;
     private static final String TAG = "UpdateRequest";
     public UpdateRequest(String email, String username, String password, Response.Listener<String> listener){

@@ -1,4 +1,4 @@
-package com.example.acimo.socialfitness;
+package com.example.acimo.androidProgramming;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

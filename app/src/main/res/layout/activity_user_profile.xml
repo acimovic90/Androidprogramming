@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context="com.example.acimo.socialfitness.UserProfileActivity">
+    tools:context="com.example.acimo.androidProgramming.UserProfileActivity">
 
     <LinearLayout
         android:paddingTop="70dp"

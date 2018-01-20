@@ -1,6 +1,5 @@
-package com.example.acimo.socialfitness;
+package com.example.acimo.androidProgramming;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +12,8 @@ import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.example.acimo.socialfitness.Webservices.FitnessGymsRequest;
-import com.example.acimo.socialfitness.Webservices.UpdateRequest;
+import com.example.acimo.androidProgramming.Webservices.FitnessGymsRequest;
+import com.example.acimo.androidProgramming.Webservices.UpdateRequest;
 
 import org.json.JSONException;
 import org.json.JSONObject;

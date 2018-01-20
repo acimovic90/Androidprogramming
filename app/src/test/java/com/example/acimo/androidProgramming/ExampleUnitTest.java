@@ -1,4 +1,4 @@
-package com.example.acimo.socialfitness;
+package com.example.acimo.androidProgramming;
 
 import org.junit.Test;
 
